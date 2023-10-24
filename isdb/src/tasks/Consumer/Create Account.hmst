@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Create Account" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
     <nodes>
-        <task copy="false" id="t1" type="goal">
+        <task copy="false" id="t10" type="component">
             <graphics>
                 <graphic folded="false">
-                    <position x="451" y="33"/>
+                    <position x="449" y="11"/>
                 </graphic>
             </graphics>
             <operator id="o1" type="enable" knowledgeproceduraltype="">
@@ -13,13 +13,67 @@
                         <position x="474" y="134"/>
                     </graphic>
                 </graphics>
+                <task copy="false" id="t11" type="component" knowledgeproceduraltype="">
+                    <graphics>
+                        <graphic folded="false">
+                            <position x="-104" y="216"/>
+                        </graphic>
+                    </graphics>
+                    <description>Go to webpage</description>
+                    <xlproperties/>
+                    <coreproperties>
+                        <categories>
+                            <category name="simulation">
+<property name="duration" value="false"/>
+<property name="iterative" value="0"/>
+<property name="optional" value="false"/>
+<property name="minexectime" value="0"/>
+<property name="maxexectime" value="0"/>
+                            </category>
+                            <category name="authority">
+<property name="responsibility" type="java.lang.Boolean" value="false"/>
+<property name="authority" type="java.lang.Boolean" value="false"/>
+                            </category>
+                            <category name="criticality">
+<property name="criticality" type="java.lang.Integer" value="0"/>
+                            </category>
+                        </categories>
+                    </coreproperties>
+                </task>
                 <task copy="false" id="t5" type="motor" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="217" y="229"/>
+                            <position x="65" y="233"/>
                         </graphic>
                     </graphics>
-                    <description>Click create account</description>
+                    <description>Click on login in navbar</description>
+                    <xlproperties/>
+                    <coreproperties>
+                        <categories>
+                            <category name="simulation">
+<property name="duration" value="false"/>
+<property name="iterative" value="0"/>
+<property name="optional" value="false"/>
+<property name="minexectime" value="0"/>
+<property name="maxexectime" value="0"/>
+                            </category>
+                            <category name="authority">
+<property name="responsibility" type="java.lang.Boolean" value="false"/>
+<property name="authority" type="java.lang.Boolean" value="false"/>
+                            </category>
+                            <category name="criticality">
+<property name="criticality" type="java.lang.Integer" value="0"/>
+                            </category>
+                        </categories>
+                    </coreproperties>
+                </task>
+                <task copy="false" id="t12" type="motor" knowledgeproceduraltype="">
+                    <graphics>
+                        <graphic folded="false">
+                            <position x="211" y="233"/>
+                        </graphic>
+                    </graphics>
+                    <description>Click on create new account button</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -43,22 +97,22 @@
                 <task copy="false" id="t2" type="abstract" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="433" y="211"/>
+                            <position x="432" y="233"/>
                         </graphic>
                     </graphics>
                     <operator id="o2" type="enable" knowledgeproceduraltype="">
                         <graphics>
                             <graphic>
-<position x="473" y="296"/>
+<position x="432" y="296"/>
                             </graphic>
                         </graphics>
                         <task copy="false" id="t6" type="interactive_input" knowledgeproceduraltype="">
                             <graphics>
 <graphic folded="false">
-    <position x="164" y="405"/>
+    <position x="162" y="405"/>
 </graphic>
                             </graphics>
-                            <description>Enter E-mail</description>
+                            <description>Enter firstname</description>
                             <xlproperties/>
                             <coreproperties>
 <categories>
@@ -82,10 +136,10 @@
                         <task copy="false" id="t7" type="interactive_input" knowledgeproceduraltype="">
                             <graphics>
 <graphic folded="false">
-    <position x="277" y="405"/>
+    <position x="319" y="405"/>
 </graphic>
                             </graphics>
-                            <description>Enter Password</description>
+                            <description>Enter email</description>
                             <xlproperties/>
                             <coreproperties>
 <categories>
@@ -109,10 +163,37 @@
                         <task copy="false" id="t8" type="interactive_input" knowledgeproceduraltype="">
                             <graphics>
 <graphic folded="false">
-    <position x="403" y="405"/>
+    <position x="428" y="405"/>
 </graphic>
                             </graphics>
-                            <description>Enter Name</description>
+                            <description>Enter password</description>
+                            <xlproperties/>
+                            <coreproperties>
+<categories>
+    <category name="simulation">
+        <property name="duration" value="false"/>
+        <property name="iterative" value="0"/>
+        <property name="optional" value="false"/>
+        <property name="minexectime" value="0"/>
+        <property name="maxexectime" value="0"/>
+    </category>
+    <category name="authority">
+        <property name="responsibility" type="java.lang.Boolean" value="false"/>
+        <property name="authority" type="java.lang.Boolean" value="false"/>
+    </category>
+    <category name="criticality">
+        <property name="criticality" type="java.lang.Integer" value="0"/>
+    </category>
+</categories>
+                            </coreproperties>
+                        </task>
+                        <task copy="false" id="t13" type="interactive_input" knowledgeproceduraltype="">
+                            <graphics>
+<graphic folded="false">
+    <position x="544" y="405"/>
+</graphic>
+                            </graphics>
+                            <description>Re-type password</description>
                             <xlproperties/>
                             <coreproperties>
 <categories>
@@ -134,7 +215,7 @@
                             </coreproperties>
                         </task>
                     </operator>
-                    <description>Enter user information</description>
+                    <description>Fill out form</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -155,13 +236,67 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t9" type="motor" knowledgeproceduraltype="">
+                <task copy="false" id="t14" type="motor" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="655" y="211"/>
+                            <position x="535" y="233"/>
                         </graphic>
                     </graphics>
-                    <description>Click 'Create'</description>
+                    <description>Click create account</description>
+                    <xlproperties/>
+                    <coreproperties>
+                        <categories>
+                            <category name="simulation">
+<property name="duration" value="false"/>
+<property name="iterative" value="0"/>
+<property name="optional" value="false"/>
+<property name="minexectime" value="0"/>
+<property name="maxexectime" value="0"/>
+                            </category>
+                            <category name="authority">
+<property name="responsibility" type="java.lang.Boolean" value="false"/>
+<property name="authority" type="java.lang.Boolean" value="false"/>
+                            </category>
+                            <category name="criticality">
+<property name="criticality" type="java.lang.Integer" value="0"/>
+                            </category>
+                        </categories>
+                    </coreproperties>
+                </task>
+                <task copy="false" id="t15" type="interactive_output" knowledgeproceduraltype="">
+                    <graphics>
+                        <graphic folded="false">
+                            <position x="671" y="233"/>
+                        </graphic>
+                    </graphics>
+                    <description>Display confirmation</description>
+                    <xlproperties/>
+                    <coreproperties>
+                        <categories>
+                            <category name="simulation">
+<property name="duration" value="false"/>
+<property name="iterative" value="0"/>
+<property name="optional" value="false"/>
+<property name="minexectime" value="0"/>
+<property name="maxexectime" value="0"/>
+                            </category>
+                            <category name="authority">
+<property name="responsibility" type="java.lang.Boolean" value="false"/>
+<property name="authority" type="java.lang.Boolean" value="false"/>
+                            </category>
+                            <category name="criticality">
+<property name="criticality" type="java.lang.Integer" value="0"/>
+                            </category>
+                        </categories>
+                    </coreproperties>
+                </task>
+                <task copy="false" id="t16" type="interactive_output" knowledgeproceduraltype="">
+                    <graphics>
+                        <graphic folded="false">
+                            <position x="828" y="233"/>
+                        </graphic>
+                    </graphics>
+                    <description>Redirect to frontpage</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -206,16 +341,7 @@
         </task>
     </nodes>
     <datas/>
-    <errors>
-        <genotype gemstype="Omissions following interruptions" name="Entered wrong information" type="slip" id="0">
-            <graphics>
-                <graphic>
-                    <position x="603" y="395"/>
-                </graphic>
-            </graphics>
-            <genotypetonode nodeid="t9"/>
-        </genotype>
-    </errors>
+    <errors/>
     <security/>
     <parameters/>
     <instancevalues/>
