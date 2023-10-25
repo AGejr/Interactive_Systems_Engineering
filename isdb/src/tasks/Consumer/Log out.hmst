@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="View Album" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
+<hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Log out" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
     <nodes>
-        <task copy="false" id="t1" type="component">
+        <task copy="false" id="t1" type="goal">
             <graphics>
                 <graphic folded="false">
-                    <position x="216" y="3"/>
+                    <position x="281" y="88"/>
                 </graphic>
             </graphics>
             <operator id="o1" type="enable" knowledgeproceduraltype="">
                 <graphics>
                     <graphic>
-                        <position x="240" y="165"/>
+                        <position x="283" y="218"/>
                     </graphic>
                 </graphics>
                 <task copy="false" id="t2" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="3" y="248"/>
+                            <position x="77" y="299"/>
                         </graphic>
                     </graphics>
-                    <description>Go to webpage</description>
+                    <description>Go to webpage </description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -40,13 +40,74 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t3" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t3" type="abstract" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="183" y="255"/>
+                            <position x="217" y="299"/>
                         </graphic>
                     </graphics>
-                    <description>Find album</description>
+                    <operator id="o2" type="choice" knowledgeproceduraltype="">
+                        <graphics>
+                            <graphic>
+<position x="249" y="391"/>
+                            </graphic>
+                        </graphics>
+                        <task copy="false" id="t4" type="component" knowledgeproceduraltype="">
+                            <graphics>
+<graphic folded="false">
+    <position x="138" y="445"/>
+</graphic>
+                            </graphics>
+                            <description>Create profile</description>
+                            <xlproperties/>
+                            <coreproperties>
+<categories>
+    <category name="simulation">
+        <property name="duration" value="false"/>
+        <property name="iterative" value="0"/>
+        <property name="optional" value="false"/>
+        <property name="minexectime" value="0"/>
+        <property name="maxexectime" value="0"/>
+    </category>
+    <category name="authority">
+        <property name="responsibility" type="java.lang.Boolean" value="false"/>
+        <property name="authority" type="java.lang.Boolean" value="false"/>
+    </category>
+    <category name="criticality">
+        <property name="criticality" type="java.lang.Integer" value="0"/>
+    </category>
+</categories>
+                            </coreproperties>
+                        </task>
+                        <task copy="false" id="t5" type="component" knowledgeproceduraltype="">
+                            <graphics>
+<graphic folded="false">
+    <position x="313" y="450"/>
+</graphic>
+                            </graphics>
+                            <description>Login</description>
+                            <xlproperties/>
+                            <coreproperties>
+<categories>
+    <category name="simulation">
+        <property name="duration" value="false"/>
+        <property name="iterative" value="0"/>
+        <property name="optional" value="false"/>
+        <property name="minexectime" value="0"/>
+        <property name="maxexectime" value="0"/>
+    </category>
+    <category name="authority">
+        <property name="responsibility" type="java.lang.Boolean" value="false"/>
+        <property name="authority" type="java.lang.Boolean" value="false"/>
+    </category>
+    <category name="criticality">
+        <property name="criticality" type="java.lang.Integer" value="0"/>
+    </category>
+</categories>
+                            </coreproperties>
+                        </task>
+                    </operator>
+                    <description>Be logged in</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -67,13 +128,13 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t4" type="motor" knowledgeproceduraltype="">
+                <task copy="false" id="t6" type="motor" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="328" y="266"/>
+                            <position x="323" y="299"/>
                         </graphic>
                     </graphics>
-                    <description>Click on alum</description>
+                    <description>CLick on logout in navbar</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -94,13 +155,40 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t5" type="interactive_output" knowledgeproceduraltype="">
+                <task copy="false" id="t7" type="interactive_output" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="466" y="268"/>
+                            <position x="489" y="299"/>
                         </graphic>
                     </graphics>
-                    <description>Display album</description>
+                    <description>Display confirmation</description>
+                    <xlproperties/>
+                    <coreproperties>
+                        <categories>
+                            <category name="simulation">
+<property name="duration" value="false"/>
+<property name="iterative" value="0"/>
+<property name="optional" value="false"/>
+<property name="minexectime" value="0"/>
+<property name="maxexectime" value="0"/>
+                            </category>
+                            <category name="authority">
+<property name="responsibility" type="java.lang.Boolean" value="false"/>
+<property name="authority" type="java.lang.Boolean" value="false"/>
+                            </category>
+                            <category name="criticality">
+<property name="criticality" type="java.lang.Integer" value="0"/>
+                            </category>
+                        </categories>
+                    </coreproperties>
+                </task>
+                <task copy="false" id="t8" type="interactive_output" knowledgeproceduraltype="">
+                    <graphics>
+                        <graphic folded="false">
+                            <position x="646" y="299"/>
+                        </graphic>
+                    </graphics>
+                    <description>Redirect to frntpage</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -122,7 +210,7 @@
                     </coreproperties>
                 </task>
             </operator>
-            <description>View album</description>
+            <description>Log out</description>
             <xlproperties/>
             <coreproperties>
                 <categories>

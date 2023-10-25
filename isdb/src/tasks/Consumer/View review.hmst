@@ -1,37 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Login or View" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
+<hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="View review" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
     <nodes>
-        <task copy="false" id="t1" type="goal">
+        <task copy="false" id="t1" type="component">
             <graphics>
                 <graphic folded="false">
-                    <position x="463" y="65"/>
+                    <position x="296" y="57"/>
                 </graphic>
             </graphics>
-            <operator id="o1" type="choice" knowledgeproceduraltype="">
+            <operator id="o1" type="enable" knowledgeproceduraltype="">
                 <graphics>
                     <graphic>
-                        <position x="476" y="183"/>
+                        <position x="314" y="164"/>
                     </graphic>
                 </graphics>
-                <task copy="false" id="t2" type="abstract" knowledgeproceduraltype="">
+                <task copy="false" id="t2" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="359" y="295"/>
+                            <position x="42" y="219"/>
                         </graphic>
                     </graphics>
-                    <operator id="o3" type="enable" knowledgeproceduraltype="">
+                    <description>Go to webpage</description>
+                    <xlproperties/>
+                    <coreproperties>
+                        <categories>
+                            <category name="simulation">
+<property name="duration" value="false"/>
+<property name="iterative" value="0"/>
+<property name="optional" value="false"/>
+<property name="minexectime" value="0"/>
+<property name="maxexectime" value="0"/>
+                            </category>
+                            <category name="authority">
+<property name="responsibility" type="java.lang.Boolean" value="false"/>
+<property name="authority" type="java.lang.Boolean" value="false"/>
+                            </category>
+                            <category name="criticality">
+<property name="criticality" type="java.lang.Integer" value="0"/>
+                            </category>
+                        </categories>
+                    </coreproperties>
+                </task>
+                <task copy="false" id="t3" type="abstract" knowledgeproceduraltype="">
+                    <graphics>
+                        <graphic folded="false">
+                            <position x="181" y="219"/>
+                        </graphic>
+                    </graphics>
+                    <operator id="o2" type="choice" knowledgeproceduraltype="">
                         <graphics>
                             <graphic>
-<position x="332" y="393"/>
+<position x="199" y="342"/>
                             </graphic>
                         </graphics>
-                        <task copy="false" id="t5" type="motor" knowledgeproceduraltype="">
+                        <task copy="false" id="t4" type="component" knowledgeproceduraltype="">
                             <graphics>
 <graphic folded="false">
-    <position x="135" y="413"/>
+    <position x="41" y="451"/>
 </graphic>
                             </graphics>
-                            <description>Click login</description>
+                            <description>View song</description>
                             <xlproperties/>
                             <coreproperties>
 <categories>
@@ -52,74 +79,13 @@
 </categories>
                             </coreproperties>
                         </task>
-                        <task copy="false" id="t10" type="abstract" knowledgeproceduraltype="">
+                        <task copy="false" id="t5" type="component" knowledgeproceduraltype="">
                             <graphics>
 <graphic folded="false">
-    <position x="280" y="466"/>
+    <position x="161" y="451"/>
 </graphic>
                             </graphics>
-                            <operator id="o2" type="enable" knowledgeproceduraltype="">
-<graphics>
-    <graphic>
-        <position x="274" y="589"/>
-    </graphic>
-</graphics>
-<task copy="false" id="t6" type="interactive_input" knowledgeproceduraltype="">
-    <graphics>
-        <graphic folded="false">
-            <position x="222" y="654"/>
-        </graphic>
-    </graphics>
-    <description>Enter email</description>
-    <xlproperties/>
-    <coreproperties>
-        <categories>
-            <category name="simulation">
-                <property name="duration" value="false"/>
-                <property name="iterative" value="0"/>
-                <property name="optional" value="false"/>
-                <property name="minexectime" value="0"/>
-                <property name="maxexectime" value="0"/>
-            </category>
-            <category name="authority">
-                <property name="responsibility" type="java.lang.Boolean" value="false"/>
-                <property name="authority" type="java.lang.Boolean" value="false"/>
-            </category>
-            <category name="criticality">
-                <property name="criticality" type="java.lang.Integer" value="0"/>
-            </category>
-        </categories>
-    </coreproperties>
-</task>
-<task copy="false" id="t7" type="interactive_input" knowledgeproceduraltype="">
-    <graphics>
-        <graphic folded="false">
-            <position x="332" y="654"/>
-        </graphic>
-    </graphics>
-    <description>Enter password</description>
-    <xlproperties/>
-    <coreproperties>
-        <categories>
-            <category name="simulation">
-                <property name="duration" value="false"/>
-                <property name="iterative" value="0"/>
-                <property name="optional" value="false"/>
-                <property name="minexectime" value="0"/>
-                <property name="maxexectime" value="0"/>
-            </category>
-            <category name="authority">
-                <property name="responsibility" type="java.lang.Boolean" value="false"/>
-                <property name="authority" type="java.lang.Boolean" value="false"/>
-            </category>
-            <category name="criticality">
-                <property name="criticality" type="java.lang.Integer" value="0"/>
-            </category>
-        </categories>
-    </coreproperties>
-</task>
-                            </operator>
-                            <description>Enter login info</description>
+                            <description>view album</description>
                             <xlproperties/>
                             <coreproperties>
 <categories>
@@ -140,40 +106,13 @@
 </categories>
                             </coreproperties>
                         </task>
-                        <task copy="false" id="t8" type="motor" knowledgeproceduraltype="">
+                        <task copy="false" id="t6" type="component" knowledgeproceduraltype="">
                             <graphics>
 <graphic folded="false">
-    <position x="397" y="476"/>
+    <position x="279" y="451"/>
 </graphic>
                             </graphics>
-                            <description>Click login</description>
-                            <xlproperties/>
-                            <coreproperties>
-<categories>
-    <category name="simulation">
-        <property name="duration" value="false"/>
-        <property name="iterative" value="0"/>
-        <property name="optional" value="false"/>
-        <property name="minexectime" value="0"/>
-        <property name="maxexectime" value="0"/>
-    </category>
-    <category name="authority">
-        <property name="responsibility" type="java.lang.Boolean" value="false"/>
-        <property name="authority" type="java.lang.Boolean" value="false"/>
-    </category>
-    <category name="criticality">
-        <property name="criticality" type="java.lang.Integer" value="0"/>
-    </category>
-</categories>
-                            </coreproperties>
-                        </task>
-                        <task copy="false" id="t9" type="system" knowledgeproceduraltype="">
-                            <graphics>
-<graphic folded="false">
-    <position x="463" y="413"/>
-</graphic>
-                            </graphics>
-                            <description>Validate login</description>
+                            <description>view user</description>
                             <xlproperties/>
                             <coreproperties>
 <categories>
@@ -195,7 +134,7 @@
                             </coreproperties>
                         </task>
                     </operator>
-                    <description>Login</description>
+                    <description>Find review</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -216,13 +155,40 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t4" type="cognitive_decision" knowledgeproceduraltype="">
+                <task copy="false" id="t7" type="motor" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="589" y="295"/>
+                            <position x="323" y="228"/>
                         </graphic>
                     </graphics>
-                    <description>Continue without login in</description>
+                    <description>Click on specific review</description>
+                    <xlproperties/>
+                    <coreproperties>
+                        <categories>
+                            <category name="simulation">
+<property name="duration" value="false"/>
+<property name="iterative" value="0"/>
+<property name="optional" value="false"/>
+<property name="minexectime" value="0"/>
+<property name="maxexectime" value="0"/>
+                            </category>
+                            <category name="authority">
+<property name="responsibility" type="java.lang.Boolean" value="false"/>
+<property name="authority" type="java.lang.Boolean" value="false"/>
+                            </category>
+                            <category name="criticality">
+<property name="criticality" type="java.lang.Integer" value="0"/>
+                            </category>
+                        </categories>
+                    </coreproperties>
+                </task>
+                <task copy="false" id="t8" type="interactive_output" knowledgeproceduraltype="">
+                    <graphics>
+                        <graphic folded="false">
+                            <position x="514" y="234"/>
+                        </graphic>
+                    </graphics>
+                    <description>Display review</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -244,7 +210,7 @@
                     </coreproperties>
                 </task>
             </operator>
-            <description>Login or View</description>
+            <description>View review</description>
             <xlproperties/>
             <coreproperties>
                 <categories>
@@ -267,16 +233,7 @@
         </task>
     </nodes>
     <datas/>
-    <errors>
-        <genotype gemstype="Omissions following interruptions" name="User doesn't exist" type="slip" id="0">
-            <graphics>
-                <graphic>
-                    <position x="543" y="529"/>
-                </graphic>
-            </graphics>
-            <genotypetonode nodeid="t9"/>
-        </genotype>
-    </errors>
+    <errors/>
     <security/>
     <parameters/>
     <instancevalues/>
