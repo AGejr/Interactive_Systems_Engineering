@@ -50,37 +50,48 @@
     text-decoration: underline;
 }
 
-/* Style the "Welcome" text */
-.welcome-text {
-    text-align: center;
-    font-size: 45px;
-    color: #000000;
-}
-
-/* Style the search container */
-.search-container {
+/* Style the welcome container */
+.welcome-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px; /* Adjust the margin as needed */
+    margin-top: 10px;
 }
 
-/* Style the search bar container */
+/* Style the welcome text and align with trending text */
+.welcome-text {
+    text-align: center; /* Change the text alignment to center */
+    font-size: 30px;
+    color: #000000;
+    margin-top: 0; /* Remove the margin to align with the trending text */
+    width: 100%;
+}
+
+/* Style the search container and align the search button horizontally */
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+/* Style the search bar and input */
 .search-bar {
     display: flex;
     align-items: center;
 }
 
-/* Style the search input field */
+/* Style the search input field and make it wider */
 #search-input {
-    width: 600px;
+    width: 800px; /* Adjust the width as needed */
     height: 40px;
     font-size: 25px;
     border: 2px solid #777777;
     border-radius: 20px;
     text-align: center;
-    outline: none; /* Remove the default focus border */
+    outline: none;
 }
+
 
 /* Style the search button */
 #search-button {
@@ -92,7 +103,6 @@
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    margin-top: 10px; /* Adjust the margin as needed */
 }
 
 /* Style the input when it's focused */
