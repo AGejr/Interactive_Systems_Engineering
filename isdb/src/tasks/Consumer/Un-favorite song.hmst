@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="View Song" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
+<hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Un-favorite song" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
     <nodes>
-        <task copy="false" id="t1" type="component">
+        <task copy="false" id="t1" type="abstract">
             <graphics>
                 <graphic folded="false">
-                    <position x="223" y="42"/>
+                    <position x="327" y="93"/>
                 </graphic>
             </graphics>
             <operator id="o1" type="enable" knowledgeproceduraltype="">
                 <graphics>
                     <graphic>
-                        <position x="249" y="179"/>
+                        <position x="361" y="186"/>
                     </graphic>
                 </graphics>
                 <task copy="false" id="t2" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="15" y="269"/>
+                            <position x="96" y="258"/>
                         </graphic>
                     </graphics>
                     <description>Go to webpage</description>
@@ -43,7 +43,7 @@
                 <task copy="false" id="t3" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="174" y="269"/>
+                            <position x="231" y="258"/>
                         </graphic>
                     </graphics>
                     <description>Find song</description>
@@ -67,13 +67,13 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t4" type="motor" knowledgeproceduraltype="">
+                <task copy="false" id="t4" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="309" y="269"/>
+                            <position x="352" y="258"/>
                         </graphic>
                     </graphics>
-                    <description>Click on specified song</description>
+                    <description>View song</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -94,13 +94,40 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t5" type="interactive_output" knowledgeproceduraltype="">
+                <task copy="false" id="t5" type="motor" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="487" y="269"/>
+                            <position x="468" y="258"/>
                         </graphic>
                     </graphics>
-                    <description>Display song</description>
+                    <description>Click on un-favorite</description>
+                    <xlproperties/>
+                    <coreproperties>
+                        <categories>
+                            <category name="simulation">
+<property name="duration" value="false"/>
+<property name="iterative" value="0"/>
+<property name="optional" value="false"/>
+<property name="minexectime" value="0"/>
+<property name="maxexectime" value="0"/>
+                            </category>
+                            <category name="authority">
+<property name="responsibility" type="java.lang.Boolean" value="false"/>
+<property name="authority" type="java.lang.Boolean" value="false"/>
+                            </category>
+                            <category name="criticality">
+<property name="criticality" type="java.lang.Integer" value="0"/>
+                            </category>
+                        </categories>
+                    </coreproperties>
+                </task>
+                <task copy="false" id="t6" type="interactive_output" knowledgeproceduraltype="">
+                    <graphics>
+                        <graphic folded="false">
+                            <position x="616" y="258"/>
+                        </graphic>
+                    </graphics>
+                    <description>Display that song is removed from favorites</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -122,7 +149,7 @@
                     </coreproperties>
                 </task>
             </operator>
-            <description>View song</description>
+            <description>Un-favorite song</description>
             <xlproperties/>
             <coreproperties>
                 <categories>

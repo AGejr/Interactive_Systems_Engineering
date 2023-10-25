@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="View Song" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
+<hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Favorite song" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
     <nodes>
-        <task copy="false" id="t1" type="component">
+        <task copy="false" id="t1" type="abstract">
             <graphics>
                 <graphic folded="false">
-                    <position x="223" y="42"/>
+                    <position x="206" y="42"/>
                 </graphic>
             </graphics>
             <operator id="o1" type="enable" knowledgeproceduraltype="">
                 <graphics>
                     <graphic>
-                        <position x="249" y="179"/>
+                        <position x="225" y="139"/>
                     </graphic>
                 </graphics>
                 <task copy="false" id="t2" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="15" y="269"/>
+                            <position x="16" y="193"/>
                         </graphic>
                     </graphics>
                     <description>Go to webpage</description>
@@ -43,7 +43,7 @@
                 <task copy="false" id="t3" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="174" y="269"/>
+                            <position x="190" y="198"/>
                         </graphic>
                     </graphics>
                     <description>Find song</description>
@@ -70,10 +70,10 @@
                 <task copy="false" id="t4" type="motor" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="309" y="269"/>
+                            <position x="374" y="206"/>
                         </graphic>
                     </graphics>
-                    <description>Click on specified song</description>
+                    <description>Click on favorite</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -97,10 +97,10 @@
                 <task copy="false" id="t5" type="interactive_output" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="487" y="269"/>
+                            <position x="572" y="204"/>
                         </graphic>
                     </graphics>
-                    <description>Display song</description>
+                    <description>Display that song is added to favorites</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -122,7 +122,7 @@
                     </coreproperties>
                 </task>
             </operator>
-            <description>View song</description>
+            <description>Favorite song</description>
             <xlproperties/>
             <coreproperties>
                 <categories>
