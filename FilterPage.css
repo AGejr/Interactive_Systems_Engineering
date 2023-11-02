@@ -1,0 +1,236 @@
+/* Copy and paste the entire Frontpage.css styles here */
+/* Add a navigation bar style */ 
+.navbar {
+    position: relative;
+    width: 100%; /* Fill the entire width of the page */
+    background: #777777;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+/* Style the container within the navigation bar */
+.nav-container {
+    max-width: 1604px; /* Limit the content width */
+    width: 100%;
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    justify-content: space-between; /* Center the logo horizontally */
+}
+
+/* Style the logo */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Move "ISDb" to the right */
+}
+
+/* Change the "ISDb" text color to white and make it bigger */
+.ISDb {
+    color: #FFFFFF;
+    font-size: 50px; /* Increase font size */
+}
+
+/* Style the login button */
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+/* Style the button itself */
+.login-button button {
+    background: none;
+    border: none;
+    font-size: 20px; /* Adjust font size as needed */
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* Add hover effect to the button (optional) */
+.login-button button:hover {
+    text-decoration: underline;
+}
+
+/* Style the welcome container */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Style the welcome text and align with trending text */
+.welcome-text {
+    text-align: center; /* Change the text alignment to center */
+    font-size: 30px;
+    color: #000000;
+    margin-top: 0; /* Remove the margin to align with the trending text */
+    width: 100%;
+}
+
+/* Style the search container and align the search button horizontally */
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+/* Style the search bar and input */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+/* Style the search input field and make it wider */
+#search-input {
+    width: 800px; /* Adjust the width as needed */
+    height: 40px;
+    font-size: 25px;
+    border: 2px solid #777777;
+    border-radius: 20px;
+    text-align: center;
+    outline: none;
+}
+
+
+/* Style the search button */
+#search-button {
+    width: 127px;
+    height: 40px;
+    font-size: 28px;
+    background: #777777;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Style the input when it's focused */
+#search-input:focus::placeholder {
+    color: transparent; /* Make the placeholder text transparent when focused */
+}
+
+/* Rest of the existing CSS remains the same */
+
+/* Adjust the margin for the Trending albums container */
+.trending-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Style the "Trending albums" text */
+.trending-container:nth-child(2) .trending-text {
+    text-align: left;
+    font-size: 30px;
+    color: #000000;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Style the "Album name" text inside the Trending albums boxes */
+.trending-container:nth-child(2) .trending-box p {
+    font-size: 18px;
+    color: #000000;
+}
+
+
+/* Style the "Trending songs" text */
+.trending-text {
+    text-align: left;
+    font-size: 30px;
+    color: #000000;
+    margin-top: 10px; /* Adjust the margin as needed */
+    width: 100%; /* Make the text full width to align with the boxes */
+}
+
+
+/* Style the trending box container with increased height */
+.trending-box {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 250px; /* Increase the box height as needed */
+    border: 1px solid #777777;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Arrange the boxes side by side using Flexbox */
+.trending-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line if the screen is narrow */
+    justify-content: space-around; /* Distribute boxes evenly on the horizontal axis */
+}
+
+/* Set a maximum width for the section to prevent boxes from spreading too far */
+.trending-section {
+    max-width: 1200px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the section horizontally */
+}
+/* ... (Copy all styles from Frontpage.css) */
+
+/* Modify styles for the filter page */
+/* Modify the search input placeholder */
+#search-input::placeholder {
+    content: "Search term...";
+}
+
+
+/* Style the filter buttons */
+.filter-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align buttons to the left */
+    margin-top: 20px;
+}
+
+/* Style the "Filter" buttons (same as front page) */
+.filter-buttons button {
+    background: #777777;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 20px; /* Reduce the padding to make the gap smaller */
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 5px; /* Add a small margin to create a smaller gap between buttons */
+    margin-right: 5px; /* Add a little space between buttons */
+
+}
+
+/* Place the filter buttons horizontally on the left side */
+.filter-buttons {
+    flex-direction: row;
+    align-items: flex-start;
+}
+/* Style the filtered results container (same as front page) */
+.filtered-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Style the filtered result boxes to match the front page */
+.filtered-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; /* Adjust to match the width on the front page */
+    height: 250px; /* Adjust to match the height on the front page */
+    border: 1px solid #777777;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px; /* Add a small margin to create a gap between boxes */
+}
+
+/* Adjust the margin for the "Song name 2020 * Artist name" text (same as front page) */
+.filtered-box p {
+    font-size: 18px;
+    color: #000000;
+}
