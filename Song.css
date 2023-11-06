@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #777777;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #FFFFFF;
+}
+
+.navbar .logo {
+    font-size: 2rem;
+}
+
+.navbar nav {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .login {
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+/* Album Information styles */
+.album-info {
+    margin: 20px;
+    padding: 20px;
+    background-color: #D9D9D9;
+}
+
+.album-info .rectangle-19 {
+    width: 15%;
+    height: 20%;
+    background: #5E5E5E;
+    transform: rotate(-90deg);
+}
+
+.album-info .rectangle-33 {
+    width: 50%;
+    height: 18%;
+    background: #A0A0A0;
+}
+
+.album-info .title-artist-year-music-label {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #000000;
+    margin: 20px 0;
+}
+
+.album-info .text {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.album-info .rectangle-34,
+.album-info .rectangle-35,
+.album-info .rectangle-36,
+.album-info .rectangle-37 {
+    width: 85%;
+    height: 2%;
+    background: #A0A0A0;
+}
+
+.album-info .vector {
+    width: 10%;
+    height: 10%;
+    background: #000000;
+}
+
+/* Reviews and Heart Icon styles */
+.reviews {
+    margin: 20px;
+    padding: 20px;
+    background-color: #D9D9D9;
+}
+
+.reviews .rectangle-42 {
+    width: 73%;
+    height: 3%;
+    background: #A0A0A0;
+}
+
+.reviews .rectangle-33 {
+    width: 12%;
+    height: 3%;
+    background: #5E5E5E;
+}
+
+.reviews .reviews {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.reviews .heart {
+    width: 10%;
+    height: 10%;
+    background: url(.png); /* Specify the path to your heart icon image */
+}
