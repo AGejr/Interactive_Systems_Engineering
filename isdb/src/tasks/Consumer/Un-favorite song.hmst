@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Un-favorite song" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
     <nodes>
-        <task copy="false" id="t1" type="abstract">
+        <task copy="false" id="t7" type="goal">
             <graphics>
                 <graphic folded="false">
-                    <position x="327" y="93"/>
+                    <position x="392" y="59"/>
                 </graphic>
             </graphics>
-            <operator id="o1" type="enable" knowledgeproceduraltype="">
+            <operator id="o2" type="enable" knowledgeproceduraltype="">
                 <graphics>
                     <graphic>
-                        <position x="361" y="186"/>
+                        <position x="409" y="162"/>
                     </graphic>
                 </graphics>
-                <task copy="false" id="t2" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t8" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="96" y="258"/>
+                            <position x="69" y="286"/>
                         </graphic>
                     </graphics>
-                    <description>Go to webpage</description>
+                    <description>Go to Webpage</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -40,10 +40,10 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t3" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t9" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="231" y="258"/>
+                            <position x="251" y="286"/>
                         </graphic>
                     </graphics>
                     <description>Find song</description>
@@ -67,13 +67,13 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t4" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t10" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="352" y="258"/>
+                            <position x="409" y="286"/>
                         </graphic>
                     </graphics>
-                    <description>View song</description>
+                    <description>View song </description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -94,13 +94,13 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t5" type="motor" knowledgeproceduraltype="">
+                <task copy="false" id="t11" type="motor" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="468" y="258"/>
+                            <position x="548" y="286"/>
                         </graphic>
                     </graphics>
-                    <description>Click on un-favorite</description>
+                    <description>CLick on un-favorite</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -121,13 +121,13 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t6" type="interactive_output" knowledgeproceduraltype="">
+                <task copy="false" id="t12" type="interactive_output" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="616" y="258"/>
+                            <position x="701" y="286"/>
                         </graphic>
                     </graphics>
-                    <description>Display that song is removed from favorites</description>
+                    <description>Display success message</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>

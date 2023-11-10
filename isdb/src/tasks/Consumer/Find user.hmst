@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Find user" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
     <nodes>
-        <task copy="false" id="t1" type="component">
+        <task copy="false" id="t4" type="goal">
             <graphics>
                 <graphic folded="false">
-                    <position x="240" y="89"/>
+                    <position x="541" y="89"/>
                 </graphic>
             </graphics>
-            <operator id="o1" type="choice" knowledgeproceduraltype="">
+            <operator id="o2" type="choice" knowledgeproceduraltype="">
                 <graphics>
                     <graphic>
-                        <position x="269" y="252"/>
+                        <position x="558" y="194"/>
                     </graphic>
                 </graphics>
-                <task copy="false" id="t2" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t5" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="100" y="344"/>
+                            <position x="403" y="252"/>
                         </graphic>
                     </graphics>
-                    <description>Search for users</description>
+                    <description>View user</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -40,10 +40,10 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t3" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t6" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="381" y="336"/>
+                            <position x="642" y="252"/>
                         </graphic>
                     </graphics>
                     <description>View review</description>
