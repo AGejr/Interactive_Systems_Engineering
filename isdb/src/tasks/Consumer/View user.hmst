@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="View user" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
     <nodes>
-        <task copy="false" id="t1" type="component">
+        <task copy="false" id="t6" type="goal">
             <graphics>
                 <graphic folded="false">
-                    <position x="182" y="61"/>
+                    <position x="281" y="62"/>
                 </graphic>
             </graphics>
             <operator id="o1" type="enable" knowledgeproceduraltype="">
                 <graphics>
                     <graphic>
-                        <position x="208" y="215"/>
+                        <position x="303" y="156"/>
                     </graphic>
                 </graphics>
-                <task copy="false" id="t2" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t7" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="19" y="301"/>
+                            <position x="58" y="270"/>
                         </graphic>
                     </graphics>
-                    <description>Go to webpage</description>
+                    <description>Go to Webpage</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -40,13 +40,13 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t3" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t8" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="165" y="301"/>
+                            <position x="195" y="270"/>
                         </graphic>
                     </graphics>
-                    <description>Find user</description>
+                    <description>Find User</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -67,13 +67,13 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t4" type="motor" knowledgeproceduraltype="">
+                <task copy="false" id="t9" type="motor" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="322" y="308"/>
+                            <position x="314" y="270"/>
                         </graphic>
                     </graphics>
-                    <description>Click on specific user</description>
+                    <description>Click on specific user </description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -94,10 +94,10 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t5" type="interactive_output" knowledgeproceduraltype="">
+                <task copy="false" id="t10" type="interactive_output" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="507" y="311"/>
+                            <position x="452" y="270"/>
                         </graphic>
                     </graphics>
                     <description>Display user</description>

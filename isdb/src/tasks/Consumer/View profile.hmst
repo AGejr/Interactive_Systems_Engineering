@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="View profile" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
     <nodes>
-        <task copy="false" id="t1" type="component">
+        <task copy="false" id="t8" type="goal">
             <graphics>
                 <graphic folded="false">
-                    <position x="257" y="39"/>
+                    <position x="354" y="65"/>
                 </graphic>
             </graphics>
-            <operator id="o1" type="enable" knowledgeproceduraltype="">
+            <operator id="o3" type="enable" knowledgeproceduraltype="">
                 <graphics>
                     <graphic>
-                        <position x="285" y="190"/>
+                        <position x="369" y="179"/>
                     </graphic>
                 </graphics>
-                <task copy="false" id="t2" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t9" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="40" y="278"/>
+                            <position x="144" y="260"/>
                         </graphic>
                     </graphics>
-                    <description>Go to webpage</description>
+                    <description>Go to Webpage</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -40,25 +40,25 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t3" type="abstract" knowledgeproceduraltype="">
+                <task copy="false" id="t10" type="abstract" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="208" y="278"/>
+                            <position x="292" y="260"/>
                         </graphic>
                     </graphics>
-                    <operator id="o2" type="choice" knowledgeproceduraltype="">
+                    <operator id="o4" type="choice" knowledgeproceduraltype="">
                         <graphics>
                             <graphic>
-<position x="217" y="388"/>
+<position x="317" y="370"/>
                             </graphic>
                         </graphics>
-                        <task copy="false" id="t4" type="component" knowledgeproceduraltype="">
+                        <task copy="false" id="t11" type="component" knowledgeproceduraltype="">
                             <graphics>
 <graphic folded="false">
-    <position x="123" y="457"/>
+    <position x="180" y="466"/>
 </graphic>
                             </graphics>
-                            <description>Create profile</description>
+                            <description>Create Profile</description>
                             <xlproperties/>
                             <coreproperties>
 <categories>
@@ -79,13 +79,13 @@
 </categories>
                             </coreproperties>
                         </task>
-                        <task copy="false" id="t5" type="component" knowledgeproceduraltype="">
+                        <task copy="false" id="t12" type="component" knowledgeproceduraltype="">
                             <graphics>
 <graphic folded="false">
-    <position x="268" y="457"/>
+    <position x="343" y="466"/>
 </graphic>
                             </graphics>
-                            <description>Log in</description>
+                            <description>Login </description>
                             <xlproperties/>
                             <coreproperties>
 <categories>
@@ -128,13 +128,13 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t6" type="motor" knowledgeproceduraltype="">
+                <task copy="false" id="t13" type="motor" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="347" y="283"/>
+                            <position x="391" y="260"/>
                         </graphic>
                     </graphics>
-                    <description>Click on profile icon in navbar</description>
+                    <description>Click on profile icon on navbar</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -155,10 +155,10 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t7" type="interactive_output" knowledgeproceduraltype="">
+                <task copy="false" id="t14" type="interactive_output" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="570" y="278"/>
+                            <position x="597" y="260"/>
                         </graphic>
                     </graphics>
                     <description>Display profile</description>
