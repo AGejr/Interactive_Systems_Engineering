@@ -13,7 +13,7 @@
                         <position x="890" y="163"/>
                     </graphic>
                 </graphics>
-                <task copy="false" id="t2" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t2" type="abstract" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
                             <position x="220" y="270"/>

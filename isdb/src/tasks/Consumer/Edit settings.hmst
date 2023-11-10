@@ -13,10 +13,10 @@
                         <position x="315" y="195"/>
                     </graphic>
                 </graphics>
-                <task copy="false" id="t11" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t11" type="abstract" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="5" y="269"/>
+                            <position x="23" y="250"/>
                         </graphic>
                     </graphics>
                     <description>View Profile</description>

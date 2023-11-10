@@ -4,7 +4,7 @@
         <task copy="false" id="t6" type="goal">
             <graphics>
                 <graphic folded="false">
-                    <position x="281" y="62"/>
+                    <position x="290" y="61"/>
                 </graphic>
             </graphics>
             <operator id="o1" type="enable" knowledgeproceduraltype="">
@@ -13,7 +13,7 @@
                         <position x="303" y="156"/>
                     </graphic>
                 </graphics>
-                <task copy="false" id="t7" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t7" type="abstract" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
                             <position x="58" y="270"/>
@@ -40,7 +40,7 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t8" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t8" type="abstract" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
                             <position x="195" y="270"/>
