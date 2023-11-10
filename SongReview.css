@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Choose your preferred font-family */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #777777;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Ensures it's above other elements */
+}
+.content {
+    padding-top: 10px; /* Adjust for the desired space between navbar and review box */
+    margin-top: 70px; /* Another way to create space */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
+.nav-container {
+    max-width: 1605px;
+    width: 100%;
+    margin: 0 20px; /* Adjust margins to position elements */
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.ISDb {
+    color: #FFFFFF;
+    font-size: 40px; /* Match the font size */
+    margin-right: 20px; /* Create space between logo and login button */
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    text-decoration: underline;
+}
+/* ... Your existing Navbar styles remain unchanged ... */
+
+.song-container {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.song-review-box {
+    width: 1000px; /* Adjust width as needed */
+    margin: 20px auto;
+    padding: 40px;
+    background: #D9D9D9;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.song-review-heading {
+    font-size: 40px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    margin-top: 0;
+}
+
+.song-details,
+
+.review-section {
+    margin-bottom: 20px;
+}
+
+textarea#review-text {
+    height: 200px; /* Increase the height as needed */
+    resize: vertical; /* Allows vertical resizing if needed */
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #A0A0A0; /* Adjust border color */
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 5px;
+}
+
+.submit-review-button {
+    background: #777777;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.song-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.song-image {
+    width: 200px;
+    height: 200px;
+    background-color: #A0A0A0; /* Placeholder color for the image box */
+    margin-right: 20px;
+    /* You can add background-image property to add an actual image */
+}
+.song-details {
+    flex: 1;
+}
+
+.song-title {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.artist-year {
+    font-size: 16px;
+    color: #666666;
+    /* Adjust styles as needed */
+}
