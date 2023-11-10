@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
-    <link rel="stylesheet" href="Frontpage.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='frontpage.css') }}">
 </head>
 <body>
     <!-- Frontpage -->
@@ -16,11 +16,10 @@
                     <span class="ISDb">ISDb</span>
                 </div>
                 <div class="login-button">
-                    <button>Login</button>
+                    <a href="{{ url_for('login') }}">Login</a>
                 </div>
             </div>
         </div>
-        <!-- Rest of your content -->
         <!-- Rest of your content -->
         <div class="trending-section">
             <div class="welcome-container">
@@ -29,11 +28,14 @@
                 </div>
                 <div class="search-container">
                     <div class="search-bar">
-                        <input type="text" id="search-input" placeholder="Search for song, artist, user...">
-                        <button id="search-button">Search</button>
+                        <form action="{{ url_for('search') }}">
+                            <input type="text" id="search-input" name="query" placeholder="Search for song, artist, user...">
+                            <button type="submit" id="search-button">Search</button>
+                        </form>
                     </div>
                 </div>
             </div>
+            <!-- ... Remaining content -->
             <div class="trending-container">
                 <div class="trending-text">
                     Trending songs
@@ -76,9 +78,8 @@
                     <p>Album name</p>
                 </div>
             </div>
+
         </div>
-
-
     </div>
 </body>
 </html>
