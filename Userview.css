@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.navbar {
+    position: relative;
+    width: 100%;
+    background: #777777;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    max-width: 1605px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ISDb {
+    color: #FFFFFF;
+    font-size: 50px;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    text-decoration: underline;
+}
+
+.user-view {
+    position: relative;
+    width: 1300px;
+    height: 903px;
+    /* Insert the styles you provided for the user view below */
+
+    box-sizing: border-box;
+    /* ... (other styles you provided) */
+}
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Adjust this value for the gap */
+    background-color: #f2f2f2; /* Light grey background */
+    padding: 0px; /* Add padding to the content */
+    border-radius: 8px; /* Round the corners */
+}
+
+.user-photo {
+    width: 250px;
+    height: 250px;
+    background-color: grey; /* Placeholder color */
+    margin-right: 100px;
+}
+
+.user-details {
+    width: 600px; /* Adjust width as needed */
+}
+
+.reviews-section {
+    margin-top: 20px;
+}
+
+.review {
+    margin-bottom: 10px;
+    display: flex; /* Align photo and review text */
+    align-items: flex-start; /* Align review text at the top */
+}
+
+.review-photo {
+    width: 150px;
+    height: 150px;
+    background-color:grey; /* Placeholder color */
+    margin-right: 0px;  
+}
+
+.spacer {
+    height: 20px; /* Adjust this value for the gap */
+}
+.reviews-title {
+    font-weight: bold; /* Make the Reviews title bold */
+    font-size: 24px; /* Increase font size */
+}
+.review-text {
+   
+    width: 1300px; /* Adjust the width as needed */
+    height:130px;
+    background-color: #f2f2f2; /* Light grey background */
+    padding: 10px; /* Add padding to the content */
+    border-radius: 8px; /* Round the corners */
+
+}
+.review-text-content {
+    width: 600px; /* Adjust width for the review text content */
+    font-size: 18px; /* Increase font size for the content */
+}
+
+.review-text-title {
+    font-weight: bold; /* Make the review title bold */
+    font-size: 20px; /* Increase font size */
+}
