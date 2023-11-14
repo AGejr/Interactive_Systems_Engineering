@@ -13,21 +13,50 @@ if mydb.is_connected():
     print("Connected to the MySQL server!")
     mycursor = mydb.cursor()
 
-    # Check if the tables exist
-    mycursor.execute("SHOW TABLES")
-    tables = mycursor.fetchall()
-    table_names = [table[0] for table in tables]
+    # Define SQL statements for table creation
+    sql_statements = [
+        """CREATE TABLE IF NOT EXISTS Artist (
+            ArtistID INT AUTO_INCREMENT PRIMARY KEY,
+            Name VARCHAR(100),
+            Genre VARCHAR(50),
+            Description TEXT
+        )""",
+        """CREATE TABLE IF NOT EXISTS Album (
+            AlbumID INT AUTO_INCREMENT PRIMARY KEY,
+            Title VARCHAR(100),
+            ReleaseYear INT,
+            ArtistID INT,
+            FOREIGN KEY (ArtistID) REFERENCES Artist(ArtistID)
+        )""",
+        """CREATE TABLE IF NOT EXISTS Song (
+            SongID INT AUTO_INCREMENT PRIMARY KEY,
+            Title VARCHAR(100),
+            AlbumID INT,
+            Duration TIME,
+            ArtistID INT,
+            FOREIGN KEY (AlbumID) REFERENCES Album(AlbumID),
+            FOREIGN KEY (ArtistID) REFERENCES Artist(ArtistID)
+        )""",
+        """CREATE TABLE IF NOT EXISTS Review (
+            ReviewID INT AUTO_INCREMENT PRIMARY KEY,
+            SongID INT,
+            AlbumID INT,
+            ReviewerID INT,
+            Rating INT,
+            Comments TEXT,
+            FOREIGN KEY (SongID) REFERENCES Song(SongID),
+            FOREIGN KEY (AlbumID) REFERENCES Album(AlbumID)
+        )"""
+    ]
 
-    # Read SQL statements from tables.sql
-    with open("tables.sql", "r") as file:
-        sql_statements = file.read().split(';')
-
+    # Check and create tables if they do not exist
     for statement in sql_statements:
-        table_name = statement.split('(')[0].split()[-1]
-        if table_name not in table_names and statement.strip():
+        try:
             mycursor.execute(statement)
+        except mysql.connector.Error as err:
+            print(f"Error: {err}")
 
-    print("Tables created successfully!")
+    print("Tables checked/created successfully!")
     mydb.commit()
     mycursor.close()
     mydb.close()
