@@ -13,13 +13,13 @@
                         <position x="315" y="195"/>
                     </graphic>
                 </graphics>
-                <task copy="false" id="t2" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t11" type="abstract" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="16" y="286"/>
+                            <position x="23" y="250"/>
                         </graphic>
                     </graphics>
-                    <description>View profile</description>
+                    <description>View Profile</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>

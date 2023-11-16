@@ -4,7 +4,7 @@
         <task copy="false" id="t1" type="goal">
             <graphics>
                 <graphic folded="false">
-                    <position x="281" y="88"/>
+                    <position x="270" y="77"/>
                 </graphic>
             </graphics>
             <operator id="o1" type="enable" knowledgeproceduraltype="">
@@ -13,13 +13,13 @@
                         <position x="283" y="218"/>
                     </graphic>
                 </graphics>
-                <task copy="false" id="t2" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t12" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="77" y="299"/>
+                            <position x="50" y="282"/>
                         </graphic>
                     </graphics>
-                    <description>Go to webpage </description>
+                    <description>Go to Webpage</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -43,22 +43,22 @@
                 <task copy="false" id="t3" type="abstract" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="217" y="299"/>
+                            <position x="241" y="299"/>
                         </graphic>
                     </graphics>
                     <operator id="o2" type="choice" knowledgeproceduraltype="">
                         <graphics>
                             <graphic>
-<position x="249" y="391"/>
+<position x="255" y="396"/>
                             </graphic>
                         </graphics>
-                        <task copy="false" id="t4" type="component" knowledgeproceduraltype="">
+                        <task copy="false" id="t13" type="component" knowledgeproceduraltype="">
                             <graphics>
 <graphic folded="false">
-    <position x="138" y="445"/>
+    <position x="116" y="487"/>
 </graphic>
                             </graphics>
-                            <description>Create profile</description>
+                            <description>Create Profile</description>
                             <xlproperties/>
                             <coreproperties>
 <categories>
@@ -79,10 +79,10 @@
 </categories>
                             </coreproperties>
                         </task>
-                        <task copy="false" id="t5" type="component" knowledgeproceduraltype="">
+                        <task copy="false" id="t14" type="component" knowledgeproceduraltype="">
                             <graphics>
 <graphic folded="false">
-    <position x="313" y="450"/>
+    <position x="281" y="487"/>
 </graphic>
                             </graphics>
                             <description>Login</description>

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hamsters xmlns="http://www.irit.fr/ICS/HAMSTERS/7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Search" version="7" xsi:schemaLocation="http://www.irit.fr/ICS/HAMSTERS/7.0 https://www.irit.fr/recherches/ICS/xsd/hamsters/v7/v7.xsd">
     <nodes>
-        <task copy="false" id="t1" type="component">
+        <task copy="false" id="t10" type="goal">
             <graphics>
                 <graphic folded="false">
-                    <position x="212" y="67"/>
+                    <position x="357" y="60"/>
                 </graphic>
             </graphics>
-            <operator id="o1" type="enable" knowledgeproceduraltype="">
+            <operator id="o4" type="enable" knowledgeproceduraltype="">
                 <graphics>
                     <graphic>
-                        <position x="231" y="203"/>
+                        <position x="367" y="177"/>
                     </graphic>
                 </graphics>
-                <task copy="false" id="t2" type="component" knowledgeproceduraltype="">
+                <task copy="false" id="t11" type="component" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="9" y="297"/>
+                            <position x="143" y="255"/>
                         </graphic>
                     </graphics>
-                    <description>Go to webpage</description>
+                    <description>Go to Webpage</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -40,13 +40,13 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t3" type="motor" knowledgeproceduraltype="">
+                <task copy="false" id="t12" type="motor" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="189" y="297"/>
+                            <position x="279" y="255"/>
                         </graphic>
                     </graphics>
-                    <description>Click on search bar</description>
+                    <description>Click on search bar </description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -67,13 +67,13 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t4" type="interactive_output" knowledgeproceduraltype="">
+                <task copy="false" id="t13" type="interactive_output" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="333" y="297"/>
+                            <position x="413" y="255"/>
                         </graphic>
                     </graphics>
-                    <description>Dsiplay search bar</description>
+                    <description>Display search bar</description>
                     <xlproperties/>
                     <coreproperties>
                         <categories>
@@ -94,25 +94,25 @@
                         </categories>
                     </coreproperties>
                 </task>
-                <task copy="false" id="t5" type="abstract" knowledgeproceduraltype="">
+                <task copy="false" id="t14" type="abstract" knowledgeproceduraltype="">
                     <graphics>
                         <graphic folded="false">
-                            <position x="460" y="297"/>
+                            <position x="542" y="255"/>
                         </graphic>
                     </graphics>
-                    <operator id="o2" type="enable" knowledgeproceduraltype="">
+                    <operator id="o6" type="enable" knowledgeproceduraltype="">
                         <graphics>
                             <graphic>
-<position x="507" y="394"/>
+<position x="574" y="385"/>
                             </graphic>
                         </graphics>
-                        <task copy="false" id="t6" type="interactive_input" knowledgeproceduraltype="">
+                        <task copy="false" id="t15" type="interactive_input" knowledgeproceduraltype="">
                             <graphics>
 <graphic folded="false">
-    <position x="309" y="451"/>
+    <position x="365" y="463"/>
 </graphic>
                             </graphics>
-                            <description>Type search words</description>
+                            <description>Type search worlds</description>
                             <xlproperties/>
                             <coreproperties>
 <categories>
@@ -133,13 +133,13 @@
 </categories>
                             </coreproperties>
                         </task>
-                        <task copy="false" id="t7" type="interactive_output" knowledgeproceduraltype="">
+                        <task copy="false" id="t16" type="interactive_output" knowledgeproceduraltype="">
                             <graphics>
 <graphic folded="false">
-    <position x="460" y="451"/>
+    <position x="532" y="457"/>
 </graphic>
                             </graphics>
-                            <description>Display possible results</description>
+                            <description>Display possible result </description>
                             <xlproperties/>
                             <coreproperties>
 <categories>
@@ -160,19 +160,19 @@
 </categories>
                             </coreproperties>
                         </task>
-                        <operator id="o3" type="choice" knowledgeproceduraltype="">
+                        <operator id="o5" type="choice" knowledgeproceduraltype="">
                             <graphics>
 <graphic>
-    <position x="616" y="464"/>
+    <position x="699" y="450"/>
 </graphic>
                             </graphics>
-                            <task copy="false" id="t8" type="motor" knowledgeproceduraltype="">
+                            <task copy="false" id="t17" type="motor" knowledgeproceduraltype="">
 <graphics>
     <graphic folded="false">
-        <position x="563" y="538"/>
+        <position x="629" y="570"/>
     </graphic>
 </graphics>
-<description>Press enter</description>
+<description>Press enter </description>
 <xlproperties/>
 <coreproperties>
     <categories>
@@ -193,10 +193,10 @@
     </categories>
 </coreproperties>
                             </task>
-                            <task copy="false" id="t9" type="motor" knowledgeproceduraltype="">
+                            <task copy="false" id="t18" type="motor" knowledgeproceduraltype="">
 <graphics>
     <graphic folded="false">
-        <position x="691" y="538"/>
+        <position x="748" y="570"/>
     </graphic>
 </graphics>
 <description>Choose result</description>
