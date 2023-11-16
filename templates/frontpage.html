@@ -35,48 +35,31 @@
                     </div>
                 </div>
             </div>
-            <!-- ... Remaining content -->
+
+            <!-- Trending songs -->
             <div class="trending-container">
                 <div class="trending-text">
                     Trending songs
                 </div>
+                {% for song in songs %}
                 <div class="trending-box">
                     <img src="song-image.jpg" alt="Song Image">
-                    <p>Song name</p>
+                    <p>{{ song }}</p>
                 </div>
-                <div class="trending-box">
-                    <img src="song-image.jpg" alt="Song Image">
-                    <p>Song name</p>
-                </div>
-                <div class="trending-box">
-                    <img src="song-image.jpg" alt="Song Image">
-                    <p>Song name</p>
-                </div>
-                <div class="trending-box">
-                    <img src="song-image.jpg" alt="Song Image">
-                    <p>Song name</p>
-                </div>
+                {% endfor %}
             </div>
+
+            <!-- Trending albums -->
             <div class="trending-container">
                 <div class="trending-text">
                     Trending albums
                 </div>
+                {% for album in albums %}
                 <div class="trending-box">
                     <img src="album-image.jpg" alt="Album Image">
-                    <p>Album name</p>
+                    <p>{{ album }}</p>
                 </div>
-                <div class="trending-box">
-                    <img src="album-image.jpg" alt="Album Image">
-                    <p>Album name</p>
-                </div>
-                <div class="trending-box">
-                    <img src="album-image.jpg" alt="Album Image">
-                    <p>Album name</p>
-                </div>
-                <div class="trending-box">
-                    <img src="album-image.jpg" alt="Album Image">
-                    <p>Album name</p>
-                </div>
+                {% endfor %}
             </div>
 
         </div>
