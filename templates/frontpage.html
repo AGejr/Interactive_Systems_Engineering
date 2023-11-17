@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
-    <link rel="stylesheet" href="Frontpage.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='frontpage.css') }}">
 </head>
 <body>
     <!-- Frontpage -->
@@ -16,11 +16,10 @@
                     <span class="ISDb">ISDb</span>
                 </div>
                 <div class="login-button">
-                    <button>Login</button>
+                    <a href="{{ url_for('login') }}">Login</a>
                 </div>
             </div>
         </div>
-        <!-- Rest of your content -->
         <!-- Rest of your content -->
         <div class="trending-section">
             <div class="welcome-container">
@@ -29,56 +28,41 @@
                 </div>
                 <div class="search-container">
                     <div class="search-bar">
-                        <input type="text" id="search-input" placeholder="Search for song, artist, user...">
-                        <button id="search-button">Search</button>
+                        <form action="{{ url_for('search') }}">
+                            <input type="text" id="search-input" name="query" placeholder="Search for song, artist, user...">
+                            <button type="submit" id="search-button">Search</button>
+                        </form>
                     </div>
                 </div>
             </div>
+
+            <!-- Trending songs -->
             <div class="trending-container">
                 <div class="trending-text">
                     Trending songs
                 </div>
+                {% for song in songs %}
                 <div class="trending-box">
                     <img src="song-image.jpg" alt="Song Image">
-                    <p>Song name</p>
+                    <p>{{ song }}</p>
                 </div>
-                <div class="trending-box">
-                    <img src="song-image.jpg" alt="Song Image">
-                    <p>Song name</p>
-                </div>
-                <div class="trending-box">
-                    <img src="song-image.jpg" alt="Song Image">
-                    <p>Song name</p>
-                </div>
-                <div class="trending-box">
-                    <img src="song-image.jpg" alt="Song Image">
-                    <p>Song name</p>
-                </div>
+                {% endfor %}
             </div>
+
+            <!-- Trending albums -->
             <div class="trending-container">
                 <div class="trending-text">
                     Trending albums
                 </div>
+                {% for album in albums %}
                 <div class="trending-box">
                     <img src="album-image.jpg" alt="Album Image">
-                    <p>Album name</p>
+                    <p>{{ album }}</p>
                 </div>
-                <div class="trending-box">
-                    <img src="album-image.jpg" alt="Album Image">
-                    <p>Album name</p>
-                </div>
-                <div class="trending-box">
-                    <img src="album-image.jpg" alt="Album Image">
-                    <p>Album name</p>
-                </div>
-                <div class="trending-box">
-                    <img src="album-image.jpg" alt="Album Image">
-                    <p>Album name</p>
-                </div>
+                {% endfor %}
             </div>
+
         </div>
-
-
     </div>
 </body>
 </html>
