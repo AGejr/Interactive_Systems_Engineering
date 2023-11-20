@@ -16,7 +16,7 @@ def front_page():
 def get_trending_songs():
     # Connect to the MySQL database
     mydb = mysql.connector.connect(
-        host="localhost",
+        host="mysql",
         user="root",
         password="password123",
         database="MusicDB"
@@ -36,7 +36,7 @@ def get_trending_songs():
 def get_trending_albums():
     # Connect to the MySQL database
     mydb = mysql.connector.connect(
-        host="localhost",
+        host="mysql",
         user="root",
         password="password123",
         database="MusicDB"
