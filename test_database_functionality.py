@@ -3,7 +3,7 @@ import mysql.connector
 # Function to establish a database connection
 def connect_to_db():
     return mysql.connector.connect(
-        host="localhost",
+        host="mysql",
         user="root",
         password="password123",
         database="MusicDB"
