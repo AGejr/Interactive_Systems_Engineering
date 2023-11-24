@@ -70,12 +70,23 @@ def search():
             if mydb:
                 cursor = mydb.cursor()
 
-                # Execute a query to search for songs or albums based on the input query
-                search_query = "SELECT title FROM Song WHERE title LIKE %s UNION SELECT title FROM Album WHERE title LIKE %s"
-                param = ('%' + query + '%', '%' + query + '%')
+                # Execute queries to search for songs, albums, and artists based on the input query
+                song_query = "SELECT title, 'Song' as category FROM Song WHERE title LIKE %s"
+                album_query = "SELECT title, 'Album' as category FROM Album WHERE title LIKE %s"
+                artist_query = "SELECT name, 'Artist' as category FROM Artist WHERE name LIKE %s"
+                param = ('%' + query + '%',)
 
-                cursor.execute(search_query, param)
-                search_results = [result[0] for result in cursor.fetchall()]
+                cursor.execute(song_query, param)
+                song_results = cursor.fetchall()
+
+                cursor.execute(album_query, param)
+                album_results = cursor.fetchall()
+
+                cursor.execute(artist_query, param)
+                artist_results = cursor.fetchall()
+
+                # Combine results from all queries
+                search_results = song_results + album_results + artist_results
 
                 cursor.close()
                 mydb.close()
@@ -85,7 +96,7 @@ def search():
                 return "Unable to connect to the database."
         else:
             return "No search query provided."
-   
+ 
 # Function to establish MySQL connection
 def connect_to_db():
     try:
