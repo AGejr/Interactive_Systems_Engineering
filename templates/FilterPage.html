@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filter Page</title>
-    <link rel="stylesheet" href="FilterPage.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='FilterPage.css') }}">
 </head>
 <body>
     <!-- Filter Page -->
@@ -13,83 +13,62 @@
         <div class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <span class="ISDb">ISDb</span>
+                    <a href="{{ url_for('front_page') }}"><span class="ISDb">ISDb</span></a>
                 </div>
                 <div class="login-button">
-                    <button>Login</button>
+                    <a href="{{ url_for('login') }}">Login</a>
                 </div>
             </div>
         </div>
         
-        <!-- Search bar (same as the front page) -->
-        <div class="search-container">
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Search term...">
-                <button id="search-button">Search</button>
-            </div>
-        </div>
-
-        <!-- Filter Buttons -->
-        <div class="filter-buttons">
-            <button>Filter</button>
-            <button>Filter</button>
-            <button>Filter</button>
-            <button>Filter</button>
-            <button>Filter</button>
-        </div>
-        
-        <!-- Filtered Results (12 boxes with song images and details) -->
+        <!-- Filtered Results (updated for displaying search results) -->
         <div class="filtered-results">
-            <!-- Repeat this box 12 times -->
-            <div class="filtered-box">
-                <img src="song-image.jpg" alt="Song Image">
-                <p>Song name 2020 * Artist name</p>
-            </div>
-            <div class="filtered-box">
-                <img src="song-image.jpg" alt="Song Image">
-                <p>Song name 2020 * Artist name</p>
-            </div>
-            <div class="filtered-box">
-                <img src="song-image.jpg" alt="Song Image">
-                <p>Song name 2020 * Artist name</p>
-            </div>
-            <div class="filtered-box">
-                <img src="song-image.jpg" alt="Song Image">
-                <p>Song name 2020 * Artist name</p>
-            </div>
-            <div class="filtered-box">
-                <img src="song-image.jpg" alt="Song Image">
-                <p>Song name 2020 * Artist name</p>
-            </div>
-            <div class="filtered-box">
-                <img src="song-image.jpg" alt="Song Image">
-                <p>Song name 2020 * Artist name</p>
-            </div>
-            <div class="filtered-box">
-                <img src="song-image.jpg" alt="Song Image">
-                <p>Song name 2020 * Artist name</p>
-            </div>
-            <div class="filtered-box">
-                <img src="song-image.jpg" alt="Song Image">
-                <p>Song name 2020 * Artist name</p>
-            </div>
-            <div class="filtered-box">
-                <img src="song-image.jpg" alt="Song Image">
-                <p>Song name 2020 * Artist name</p>
-            </div>
-            <div class="filtered-box">
-                <img src="song-image.jpg" alt="Song Image">
-                <p>Song name 2020 * Artist name</p>
-            </div>
-            <div class="filtered-box">
-                <img src="song-image.jpg" alt="Song Image">
-                <p>Song name 2020 * Artist name</p>
-            </div>
-            <div class="filtered-box">
-                <img src="song-image.jpg" alt="Song Image">
-                <p>Song name 2020 * Artist name</p>
-            </div>
+            <!-- Display search results here dynamically -->
+            {% if results %}
+                <div class="filterable-results">
+                    <div class="filter-options">
+                        <button class="filter-button" data-category="Artist">Artists</button>
+                        <button class="filter-button" data-category="Song">Songs</button>
+                        <button class="filter-button" data-category="Album">Albums</button>
+                        <button class="filter-button" data-category="All">Show All</button>
+                    </div>
+                    <div id="filtered-content">
+                        {% for result in results %}
+                            <div class="filtered-box" data-category="{{ result[1] }}">
+                                {% if result[1] == 'Artist' %}
+                                    <p><strong>Artist: {{ result[0] }}</strong></p>
+                                {% elif result[1] == 'Song' %}
+                                    <p><strong>Song: {{ result[0] }}</strong></p>
+                                {% elif result[1] == 'Album' %}
+                                    <p><strong>Album: {{ result[0] }}</strong></p>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <script>
+                    const filterButtons = document.querySelectorAll('.filter-button');
+                    const filteredItems = document.querySelectorAll('.filtered-box');
+
+                    filterButtons.forEach(button => {
+                        button.addEventListener('click', function() {
+                            const category = this.getAttribute('data-category');
+                            filteredItems.forEach(item => {
+                                if (category === 'All' || item.getAttribute('data-category') === category) {
+                                    item.style.display = 'block';
+                                } else {
+                                    item.style.display = 'none';
+                                }
+                            });
+                        });
+                    });
+                </script>
+            {% else %}
+                <!-- If no search results, display default content or message -->
+                <p>No results found</p>
+            {% endif %}
         </div>
     </div>
 </body>
 </html>
+
