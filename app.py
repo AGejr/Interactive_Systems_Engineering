@@ -64,6 +64,52 @@ def search():
         query = request.args.get('query')
         # Perform search logic here based on the 'query' parameter
         return f"Search results for: {query}"  # Replace this with your search logic
+    
+# Function to establish MySQL connection
+def connect_to_db():
+    try:
+        mydb = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="password123",
+            database="MusicDB"
+        )
+        return mydb
+    except mysql.connector.Error as err:
+        print(f"Error connecting to MySQL: {err}")
+        return None
+    
+@app.route('/submit_form', methods=['POST'])
+def submit_form():
+    if request.method == 'POST':
+        # Extract form data
+        first_name = request.form['first-name']
+        email = request.form['email']
+        password = request.form['password']
+        # Add more fields as needed
+
+        # Connect to MySQL
+        mydb = connect_to_db()
+
+        if mydb:
+            print("Connected to the MySQL server!")
+            mycursor = mydb.cursor()
+
+            # Insert user details into a 'User' table (assuming it exists)
+            insert_query = "INSERT INTO User (first_name, email, password) VALUES (%s, %s, %s)"
+            user_data = (first_name, email, password)
+
+            try:
+                mycursor.execute(insert_query, user_data)
+                mydb.commit()
+                print("User data inserted successfully!")
+            except mysql.connector.Error as err:
+                print(f"Error: {err}")
+            
+            mycursor.close()
+            mydb.close()
+
+    return "Form submitted successfully!"
 
 
 if __name__ == '__main__':
