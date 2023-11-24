@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import mysql.connector
 
 app = Flask(__name__)
@@ -58,18 +58,39 @@ def login():
     return "This is the login page"  # Replace this with your login logic or template
 
 # Endpoint for search
-@app.route('/search', methods=['GET', 'POST'])
+@app.route('/search', methods=['GET'])
 def search():
     if request.method == 'GET':
         query = request.args.get('query')
-        # Perform search logic here based on the 'query' parameter
-        return f"Search results for: {query}"  # Replace this with your search logic
-    
+
+        if query:
+            # Connect to the MySQL database
+            mydb = connect_to_db()
+
+            if mydb:
+                cursor = mydb.cursor()
+
+                # Execute a query to search for songs or albums based on the input query
+                search_query = "SELECT title FROM Song WHERE title LIKE %s UNION SELECT title FROM Album WHERE title LIKE %s"
+                param = ('%' + query + '%', '%' + query + '%')
+
+                cursor.execute(search_query, param)
+                search_results = [result[0] for result in cursor.fetchall()]
+
+                cursor.close()
+                mydb.close()
+
+                return render_template('FilterPage.html', query=query, results=search_results)
+            else:
+                return "Unable to connect to the database."
+        else:
+            return "No search query provided."
+   
 # Function to establish MySQL connection
 def connect_to_db():
     try:
         mydb = mysql.connector.connect(
-            host="localhost",
+            host="mysql",
             user="root",
             password="password123",
             database="MusicDB"
