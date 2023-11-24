@@ -12,6 +12,17 @@ def front_page():
 
     return render_template('frontpage.html', songs=trending_songs, albums=trending_albums)
 
+# Route for the sign-in page
+@app.route('/signin')
+def signin():
+    return render_template('SignIn.html')  # Replace with the actual content of your signin.html
+
+# Route for the create account page
+@app.route('/create_account')
+def create_account():
+    # Replace with your create_account.html content
+    return render_template('CreateAccount.html')
+
 # Function to retrieve trending songs from the database
 def get_trending_songs():
     # Connect to the MySQL database
