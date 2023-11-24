@@ -3,6 +3,14 @@ import mysql.connector
 
 app = Flask(__name__)
 
+mysql = mysql.connector.connect(
+    host="mysql",
+    user="root",
+    password="password123", 
+    database="MusicDB"
+    raise_on_warnings=True
+)
+
 # Endpoint for the front page
 @app.route('/')
 def front_page():
@@ -65,6 +73,18 @@ def search():
         # Perform search logic here based on the 'query' parameter
         return f"Search results for: {query}"  # Replace this with your search logic
 
+
+@app.route('/album/<int:album_id>')
+def show_album(album_id):
+    cursor = mysql.cursor(dictionary=True)
+    cursor.execute('SELECT * FROM Album WHERE AlbumID = %s', (album_id,))
+    album = cursor.fetchone()
+    cursor.close()
+
+    if album:
+        return render_template('album.html', album=album)
+    else:
+        return "Album not found"
 
 if __name__ == '__main__':
     app.run(debug=True)
