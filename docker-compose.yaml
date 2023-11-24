@@ -1,0 +1,37 @@
+version: '3'
+
+networks:
+  my_network:
+    driver: bridge
+
+volumes:
+  mysql-data:
+
+services:
+  mysql:
+    build:
+      dockerfile: mysql.Dockerfile
+    container_name: mysql-container
+    volumes:
+      - mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - my_network
+
+  flask_app:
+    build: 
+      dockerfile: flask.Dockerfile
+    container_name: flask-app-container
+    ports:
+      - "5000:5000"
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password123
+      MYSQL_DB: MusicDB
+    depends_on:
+      - mysql
+    networks:
+      - my_network
+
