@@ -3,13 +3,7 @@ import mysql.connector
 
 app = Flask(__name__)
 
-mysql = mysql.connector.connect(
-    host="mysql",
-    user="root",
-    password="password123", 
-    database="MusicDB"
-    raise_on_warnings=True
-)
+
 
 # Endpoint for the front page
 @app.route('/')
@@ -76,13 +70,39 @@ def search():
 
 @app.route('/album/<int:album_id>')
 def show_album(album_id):
-    cursor = mysql.cursor(dictionary=True)
-    cursor.execute('SELECT * FROM Album WHERE AlbumID = %s', (album_id,))
-    album = cursor.fetchone()
+
+    mydb = mysql.connector.connect(
+        host="mysql",
+        user="root",
+        password="password123", 
+        database="MusicDB",
+        raise_on_warnings=True
+    )
+
+    cursor = mydb.cursor(dictionary=True)
+    album_query = '''
+        SELECT Album.Title AS album_title, Album.ReleaseYear AS release_year,
+               Artist.Name AS artist_name
+        FROM Album
+        JOIN Artist ON Album.ArtistID = Artist.ArtistID
+        WHERE Album.AlbumID = %s
+    '''
+    cursor.execute(album_query, (album_id,))
+    album_info = cursor.fetchone()
+
+    # Fetch reviews for the album
+    review_query = '''
+        SELECT Review.Rating AS rating, Review.Comments AS comments
+        FROM Review
+        WHERE Review.AlbumID = %s
+    '''
+    cursor.execute(review_query, (album_id,))
+    reviews = cursor.fetchall()
+
     cursor.close()
 
-    if album:
-        return render_template('album.html', album=album)
+    if album_info:
+        return render_template('Album.html', album=album_info, reviews=reviews)
     else:
         return "Album not found"
 

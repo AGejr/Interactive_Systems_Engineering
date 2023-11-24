@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>{{ album.title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='album.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Album.css') }}">
 </head>
 <body>
     <div class="navbar">
@@ -11,9 +11,8 @@
         <a href="#">Contact</a>
         <!-- Add more links as needed -->
     </div>
-
-
     <div class="container">
+
         <div class="album-section">
             <div class="album-cover">
                 <!-- Placeholder for album cover image -->
@@ -23,11 +22,11 @@
             <div class="album-info">
                 <div class="info-item">
                     <h2 class="info-label">Album Title</h2>
-                    <h1 class="title">{{ album.title }}</h1>
+                    <h1 class="title">{{ album.album_title }}</h1>
                 </div>
                 <div class="info-item">
                     <h2 class="info-label">Artist</h2>
-                    <p class="artist">{{ album.artist }}</p>
+                    <p class="artist">{{ album.artist_name }}</p>
                 </div>
                 <div class="info-item">
                     <h2 class="info-label">Release Year</h2>
@@ -35,8 +34,36 @@
                 </div>
             </div>
         </div>
+
+        <!-- New section for songs -->
+        <div class="song-section">
+            <h2 class="song-header">Songs</h2>
+            <ul class="song-list">
+                <!-- Individual song items will be populated dynamically -->
+                <!-- Example: -->
+                <li class="song-item">Song 1</li>
+                <li class="song-item">Song 2</li>
+                <!-- Add more songs as needed -->
+            </ul>
+        </div>
+
+
+        <div class="reviews-section">
+            <h2 class="reviews-header">Reviews</h2>
+            <div class="review">
+                {% for review in reviews %}
+                <div class="review-item">
+                    <div class="score-box">
+                        <span class="score">{{ review.rating }}</span>
+                    </div>
+                    <div class="review-content">
+                        <p>{{ review.comments }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
     </div>
-
-
 </body>
 </html>

@@ -57,7 +57,8 @@ INSERT INTO Song (Title, AlbumID, Duration, ArtistID) VALUES
 
 -- Inserting sample data into the Review table
 INSERT INTO Review (SongID, AlbumID, ReviewerID, Rating, Comments) VALUES
-    (1, 1, 101, 5, 'One of the greatest songs ever!'),    -- Bohemian Rhapsody - A Night at the Opera (Queen)
+    (1, 1, 101, 5, 'One of the greatest albums ever!'),    -- Bohemian Rhapsody - A Night at the Opera (Queen)
     (2, 2, 102, 4, 'Classic track by MJ'),               -- Billie Jean - Thriller (Michael Jackson)
     (3, 3, 103, 5, 'Timeless Beatles hit'),              -- Come Together - Abbey Road (The Beatles)
     (4, 4, 104, 4, 'Madonna at her best');               -- Like a Prayer - Like a Prayer (Madonna)
+    (1, 1, 104, 4, 'Queen at their best');               -- Like a Prayer - Like a Prayer (Madonna)
