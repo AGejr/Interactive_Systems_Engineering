@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>{{ album.title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='Album.css') }}">
 </head>
+
 <body>
     <div class="navbar">
         <a href="#">Home</a>
@@ -21,30 +23,29 @@
             </div>
             <div class="album-info">
                 <div class="info-item">
-                    <h2 class="info-label">Album Title</h2>
                     <h1 class="title">{{ album.album_title }}</h1>
                 </div>
                 <div class="info-item">
-                    <h2 class="info-label">Artist</h2>
                     <p class="artist">{{ album.artist_name }}</p>
                 </div>
                 <div class="info-item">
-                    <h2 class="info-label">Release Year</h2>
                     <p class="release-year">{{ album.release_year }}</p>
                 </div>
             </div>
         </div>
 
-        <!-- New section for songs -->
+
+        <!-- Inside the song-section in your HTML -->
         <div class="song-section">
             <h2 class="song-header">Songs</h2>
-            <ul class="song-list">
-                <!-- Individual song items will be populated dynamically -->
-                <!-- Example: -->
-                <li class="song-item">Song 1</li>
-                <li class="song-item">Song 2</li>
-                <!-- Add more songs as needed -->
-            </ul>
+            <ol class="song-list"> <!-- Use <ol> for numbered list -->
+                <!-- Individual song items fetched dynamically -->
+                {% set index = 1 %}
+                {% for song in songs %}
+                <li class="song-item">{{ index }}. {{ song }}</li>
+                {% set index = index + 1 %}
+                {% endfor %}
+            </ol>
         </div>
 
 
@@ -65,5 +66,8 @@
         </div>
 
     </div>
+
+
 </body>
+
 </html>

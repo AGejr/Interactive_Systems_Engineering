@@ -99,10 +99,19 @@ def show_album(album_id):
     cursor.execute(review_query, (album_id,))
     reviews = cursor.fetchall()
 
+    # Fetch songs for the album
+    song_query = '''
+        SELECT Song.Title AS song_title
+        FROM Song
+        WHERE Song.AlbumID = %s
+    '''
+    cursor.execute(song_query, (album_id,))
+    songs = [song['song_title'] for song in cursor.fetchall()]
+
     cursor.close()
 
     if album_info:
-        return render_template('Album.html', album=album_info, reviews=reviews)
+        return render_template('Album.html', album=album_info, reviews=reviews, songs=songs)
     else:
         return "Album not found"
 
