@@ -10,6 +10,7 @@ volumes:
 services:
   mysql:
     build:
+      context: .
       dockerfile: mysql.Dockerfile
     container_name: mysql-container
     volumes:
@@ -22,6 +23,7 @@ services:
   flask_app:
     build: 
       dockerfile: flask.Dockerfile
+      context:  .
     container_name: flask-app-container
     ports:
       - "5000:5000"
