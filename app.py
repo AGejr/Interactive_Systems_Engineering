@@ -64,9 +64,36 @@ def get_trending_albums():
     return trending_albums
 
 # Endpoint for login
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return "This is the login page"  # Replace this with your login logic or template
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+
+        # Connect to the MySQL database
+        mydb = connect_to_db()
+
+        if mydb:
+            cursor = mydb.cursor()
+
+            # Check if user exists with provided email and password
+            query = "SELECT * FROM User WHERE email = %s AND password = %s"
+            user_data = (email, password)
+
+            cursor.execute(query, user_data)
+            user = cursor.fetchone()
+
+            if user:
+                # Successful login - Redirect to front_page or any other page
+                return redirect(url_for('front_page'))
+            else:
+                # Incorrect username or password - Display an error message
+                return "Incorrect username or password"
+
+            cursor.close()
+            mydb.close()
+
+    return render_template('SignIn.html')  # Render the sign-in page
 
 # Endpoint for search
 @app.route('/search', methods=['GET'])
