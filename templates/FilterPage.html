@@ -39,8 +39,10 @@
                                     <p><strong>Artist: {{ result[0] }}</strong></p>
                                 {% elif result[1] == 'Song' %}
                                     <p><strong>Song: {{ result[0] }}</strong></p>
-                                {% elif result[1] == 'Album' %}
-                                    <p><strong>Album: {{ result[0] }}</strong></p>
+                                {% elif result['category'] == 'Album' %}
+                                    <a href="{{ url_for('show_album', album_id=result['id']) }}">
+                                        <p><strong>Album: {{ result['title'] }}</strong></p>
+                                    </a>
                                 {% endif %}
                             </div>
                         {% endfor %}

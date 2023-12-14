@@ -56,12 +56,13 @@
                 </div>
                 {% for album in albums %}
                 <div class="trending-box">
-                    <img src="album-image.jpg" alt="Album Image">
-                    <p>{{ album }}</p>
+                    <a href="{{ url_for('show_album', album_id=album.id) }}"> <!-- Link to album page -->
+                        <img src="album-image.jpg" alt="Album Image">
+                        <p>{{ album }}</p>
+                    </a>
                 </div>
                 {% endfor %}
             </div>
-
         </div>
     </div>
 </body>
