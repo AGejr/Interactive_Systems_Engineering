@@ -46,6 +46,12 @@ if mydb.is_connected():
             Comments TEXT,
             FOREIGN KEY (SongID) REFERENCES Song(SongID),
             FOREIGN KEY (AlbumID) REFERENCES Album(AlbumID)
+        )""",
+         """CREATE TABLE IF NOT EXISTS User (
+            UserID INT AUTO_INCREMENT PRIMARY KEY,
+            first_name VARCHAR(50),
+            email VARCHAR(100),
+            password VARCHAR(100)
         )"""
     ]
 

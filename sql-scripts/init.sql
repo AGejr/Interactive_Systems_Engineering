@@ -33,6 +33,17 @@ CREATE TABLE IF NOT EXISTS Review (
     FOREIGN KEY (SongID) REFERENCES Song(SongID),
     FOREIGN KEY (AlbumID) REFERENCES Album(AlbumID)
 );
+CREATE TABLE IF NOT EXISTS User (
+    UserID INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(100)
+);
+
+-- Insert sample data into the User table (optional)
+INSERT INTO User (first_name, email, password) VALUES
+    ('John', 'john@example.com', 'hashed_password_here'),
+    ('Alice', 'alice@example.com', 'hashed_password_here');
 
 -- Inserting sample data into the Artist table
 INSERT INTO Artist (Name, Genre, Description) VALUES
