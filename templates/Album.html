@@ -1,33 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Album.css">
-    <title>Album</title>
+    <title>{{ album.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Album.css') }}">
 </head>
+
 <body>
-    <div class="profile-container">
-        <div class="navbar">
-            <!-- Navbar content goes here -->
-        </div>
-        <div class="profile-content">
-            <div class="additional-box"></div>
-            <div class="profile-header">
-                <h2>Title</h2>
-                <p>Artist</p>
-                <p>Year</p>
-                <p>Music Label</p>
-            </div>
-            
-            <div class="favorite-cards">
-                <!-- Favorite cards content goes here -->
-            </div>
-            <div class="reviews-logout">
-                <p class="bold-text">Reviews</p>
-                <!-- Reviews content goes here -->
-            </div>
-        </div>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <!-- Add more links as needed -->
     </div>
+    <div class="container">
+
+        <div class="album-section">
+            <div class="album-cover">
+                <!-- Placeholder for album cover image -->
+                <!-- Adjust the image source (src) accordingly -->
+                <img src="path_to_album_cover_image.jpg" alt="Album Cover">
+            </div>
+            <div class="album-info">
+                <div class="info-item">
+                    <h1 class="title">{{ album.album_title }}</h1>
+                </div>
+                <div class="info-item">
+                    <p class="artist">{{ album.artist_name }}</p>
+                </div>
+                <div class="info-item">
+                    <p class="release-year">{{ album.release_year }}</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Inside the song-section in your HTML -->
+        <div class="song-section">
+            <h2 class="song-header">Songs</h2>
+            <ol class="song-list"> <!-- Use <ol> for numbered list -->
+                <!-- Individual song items fetched dynamically -->
+                {% set index = 1 %}
+                {% for song in songs %}
+                <li class="song-item">{{ index }}. {{ song }}</li>
+                {% set index = index + 1 %}
+                {% endfor %}
+            </ol>
+        </div>
+
+
+        <div class="reviews-section">
+            <h2 class="reviews-header">Reviews</h2>
+            <div class="review">
+                {% for review in reviews %}
+                <div class="review-item">
+                    <div class="score-box">
+                        <span class="score">{{ review.rating }}</span>
+                    </div>
+                    <div class="review-content">
+                        <p>{{ review.comments }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+
 </body>
+
 </html>
