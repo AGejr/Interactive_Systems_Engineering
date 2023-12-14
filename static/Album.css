@@ -1,72 +1,193 @@
+/* styles.css */
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
-}
-
-.profile-container {
-    position: relative;
-    width: 1605px;
-    height: 903px;
-    margin: 0 auto;
+    background-color: #f4f4f4;
 }
 
 .navbar {
-    position: absolute;
-    width: 1604px;
-    height: 90px;
-    background: #777777;
-    border-radius: 0px;
+    background-color: #333;
+    overflow: hidden;
+    width: 100%; /* Make the navbar span the width of the screen */
 }
 
-.profile-content {
-    position: absolute;
-    top: 90px; /* Adjust based on navbar height */
-    width: 1200px; /* Occupy the full width of the parent */
-    height: 300px; /* Adjust to the desired height */
-    display: flex; /* Enable flexbox layout */
-    padding: 20px; /* Add padding for content */
+.navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.additional-box {
-    flex: 0 0 30%; /* Set a fixed width for the additional box */
+.navbar a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.artist,
+.release-year {
+    color: #666;
+}
+
+.track-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.track-list li {
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* album.css */
+/* Your existing styles... */
+
+.album-section {
+    display: flex;
+    margin-top: 20px;
+}
+
+.album-cover {
+    flex: 0 0 auto;
+    width: 200px; /* Set the width of the album cover square */
+    height: 200px; /* Equal height to maintain square shape */
+    background-color: #ccc; /* Placeholder background color */
+    border-radius: 5px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.album-cover img {
     width: 100%;
-    height: 300px; /* Occupy full height of parent */
-    background: #5E5E5E;
-    margin-right: 20px; /* Add space between boxes */
-}
-
-.profile-header {
-    flex: 12; /* Adjust the flex value to set the desired width */
     height: 100%;
-    background: #A0A0A0;
-    padding: 20px; /* Add padding for content */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire box */
 }
 
-
-.profile-header h2 {
-    margin: 0;
-    font-size: 24px;
-    color: #000000;
+.album-info {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.profile-header p {
-    margin: 10px 0 0 0;
+.title {
+    font-size: 48px; /* Adjust the font size for the album title */
+    margin-top: 0;
+}
+
+.album-details {
+    font-size: 16px; /* Font size for other album information */
+}
+
+.album-details h2 {
+    margin-top: 20px; /* Adjust space after other album information */
+}
+
+.tracks-header {
+    margin-top: 20px; /* Adjust space after other album information */
+} 
+.info-label {
     font-size: 18px;
-    color: #000000;
+    margin-bottom: 5px;
 }
 
-.favorite-cards {
-    flex: 1; /* Occupy remaining space */
-    height: 315px;
+.info-item {
+    margin-bottom: 20px;
 }
 
-.bold-text {
-    font-weight: bold;
+
+
+/* Your existing styles */
+
+/* New styles for song section */
+.song-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
 }
 
-.reviews-logout {
-    position: absolute;
-    top: 410px; /* Adjust the top position as needed */
-    left: 20px; /* Adjust the left position as needed */
+.song-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.song-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.song-item {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+/* Your existing styles */
+
+/* New styles for reviews section */
+.reviews-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.reviews-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Your existing styles */
+
+/* New styles for score box and review content */
+.score-box {
+    background-color: #333; /* Dark grey color for the score box */
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    display: inline-block;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.score {
+    color: white;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    line-height: 50px; /* Center the score text vertically */
+}
+
+.review-item {
+    margin-bottom: 15px;
+    display: flex; /* Use flexbox for layout */
+}
+
+.review-content {
+    flex: 1; /* Take remaining space */
+}
+
+.review-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.review-item p {
+    font-size: 16px;
+    line-height: 1.5;
 }

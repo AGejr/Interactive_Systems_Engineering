@@ -1,2 +1,5 @@
 mysql-connector-python
 flask
+pytest
+bs4
+requests
